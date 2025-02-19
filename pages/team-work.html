@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <!-- bootstrap cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Swiper CDN css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- external css file  -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/team-work.css">
+    <title>فريق العمل</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- side bar  -->
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-arrow-left"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <!-- <a href="#">ماني للمحاماة</a> -->
+                    <img src="../img/Logo.svg" alt="" style="padding-top: 30px; " >
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="./issues.html" class="sidebar-link">
+                        <i class="lni lni-folder"></i>
+                        <span>القضايا</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./custom.html" class="sidebar-link">
+                        <i class="lni lni-users"></i>
+                        <span>العملاء</span>
+                    </a>
+                </li>
+                <li class="sidebar-item focus">
+                    <a href="../pages/team-work.html" class="sidebar-link">
+                        <i class="lni lni-network"></i>
+                        <span>فريق العمل</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="../pages/common-question.html" class="sidebar-link">
+                        <i class="lni lni-question-circle"></i>
+                        <span>الأسئلة الشائعة</span>
+                    </a>
+                </li>
+                <li class="sidebar-item position-relative">
+                    <a href="../pages/Customer-inquiries.html" class="sidebar-link">
+                        <i class="lni lni-envelope"></i>
+                        <span>استفسارات العملاء</span>
+                        <span id="notification" class="position-absolute"></span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="../pages/register.html" class="sidebar-link">
+                        <i class="lni lni-user"></i>
+                        <span>إنشاء حساب جديد</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span id="logoutBtn">تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+        <!-- end side bar  -->
+        <div class="main">
+            <!-- start navbar  -->
+            <nav class=" navbar navbar-expand">
+                <div class="container navbar-collapse collapse">
+                    <ul class="navbar-nav d-flex align-items-center justify-content-between w-100  ">
+                        <li>
+                            <p class="mb-0">مرحبا </p>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="./issues.html" class="nav-icon pe-md-0">
+                                <img src="../img/unsplash.svg" class="avatar img-fluid " alt="photo">
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+            <!-- end navbar  -->
+            <!-- start new work  -->
+            <section class="issue">
+                <div class="container">
+                    <div class="d-flex align-items-center justify-content-between  gap-4">
+                        <div class="adding d-flex align-items-center w-25 rounded-3 py-2">
+                            <div class=" rounded-3 px-3" type="button" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">
+                                <button class="bttn p-2  border-0 rounded-3">إضافة موظف جديد</button>
+                                <img src="../img/Add_round.svg" alt="add">
+                            </div>
+                        </div>
+                        <!-- <div class="search d-flex gap-3 w-50">
+                            <div class="search-items d-flex align-items-center justify-content-between w-100 p-2 position-relative ">
+                                <input type="text" class="txt w-100 p-2 rounded-3 border-0 " id="search-input" placeholder="بحث باسم الموظف">
+                                <img src="../img/search.svg" class="position-absolute" alt="search">
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="line mb-3 " style="height: 1px; background-color: #D4D3F2;"></div>
+                </div>
+                <div class="swiper container">
+                    <div class="swiper-wrapper">
+                        <!-- slides 1 -->
+                        
+                    </div>
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </section>
+            <!-- end new work  -->
+            <section class="container">
+                <!-- Modal -->
+                <div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">إضافة موظف جديد</h1>
+                            <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-0">
+                                <form id="addEmployeeForm" novalidate>
+                                    <article class="card-link rounded-3  ">
+                                        <div class="d-flex flex-column px-3 mb-2">
+                                            <div class="d-flex mb-2">
+                                                <p class="mb-0 w-100">
+                                                    <input type="text" id="employeeName" class="w-75 rounded-3 border-1" placeholder="اسم الموظف" required>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex mb-2">
+                                                <p class="mb-0 w-100">
+                                                    <select id="jobRole" class=" w-75 ">
+                                                        <option value="" disabled selected>اختر الدور الوظيفي</option>
+                                                        <option value="محامي">محامي</option>
+                                                        <option value="مستشار قانوني">مستشار قانوني</option>
+                                                    </select>
+                                                </p>
+                                                
+                                            </div>
+                                            <div>
+                                                <p class="mb-0">
+                                                    <ul class="m-0 p-0">
+                                                        <label for="">الوصف</label>
+                                                        <li class="mb-1"><input type="text" class="w-75" placeholder="الوصف 1" id="experience1" required></li>
+                                                        <li class="mb-1"><input type="text" class="w-75" placeholder="الوصف 2" id="experience2"></li>
+                                                        <li class="mb-1"><input type="text" class="w-75" placeholder="الوصف 3" id="experience3"></li>
+                                                    </ul>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        
+                                    </article>
+                                    <div class="modal-footer justify-content-start gap-3">
+                                        <button type="submit" class="py-2 px-4 rounded-3 adding">إضافة</button>
+                                        <button type="button" class="py-2 px-4 rounded del" data-bs-dismiss="modal">إلغاء</button>
+                                    </div>
+
+                                </form>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal 2 -->
+                <div class="modal fade" id="editEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">تعديل  </h1>
+                            <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body pb-0">
+                                <form novalidate>
+                                    <article class="card-link rounded-3  ">
+                                        <div class="d-flex flex-column px-3 mb-2">
+                                        <div class="d-flex mb-2">
+                                            <p class="mb-0 w-100">
+                                                <input type="text" class="w-75 rounded-3 border-1" placeholder="اسم الموظف" required>
+                                            </p>
+                                        </div>
+                                        <div class="d-flex mb-2">
+                                            <p class="mb-0 w-100">
+                                                <select id="job-role" class=" w-75 ">
+                                                    <option value="" disabled selected>اختر الدور الوظيفي</option>
+                                                    <option value="محامي">محامي</option>
+                                                    <option value="مستشار قانوني">مستشار قانوني</option>
+                                                </select>
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p class="mb-0">
+                                                <ul class="m-0 p-0">
+                                                    <label for="">الوصف</label>
+                                                    <li class="mb-1"><input type="text" class="w-75" placeholder="الوصف 1"></li>
+                                                    <li class="mb-1"><input type="text" class="w-75" placeholder="الوصف 2"></li>
+                                                    <li class="mb-1"><input type="text" class="w-75" placeholder="الوصف 3"></li>
+                                                </ul>
+                                            </p>
+                                        </div>
+                                        </div>
+                                    </article>
+                                    <div class="modal-footer justify-content-start gap-3">
+                                    <button type="button" class="py-2 px-4 rounded-3 adding">حفظ التغييرات</button>
+                                    <button type="button" class="py-2 px-4 rounded del" data-bs-dismiss="modal">إلغاء</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal 3 -->
+                <div class="modal fade" id="deleteEmployeeModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header justify-content-end">
+                            <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body d-flex justify-content-center pb-0">
+                                <form action="">
+                                    <article class="card-link rounded-3  ">
+                                        <div class="d-flex flex-column px-3 mb-2">
+                                            <div class="d-flex mb-2">
+                                                <p class="mb-0 w-100">
+                                                    هل أنت متأكد من حذف الموظف  <span>نهى المالكي </span> ؟
+                                                </p>
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </article>
+                                    <div class="modal-footer d-flex justify-content-center gap-3">
+                                        <button type="button" class="py-2 px-4 rounded-3 yes">نعم، حذف</button>
+                                        <button type="button" class="py-2 px-4 rounded cancel" data-bs-dismiss="modal">لا، إلغاء</button>
+                                    </div>                                    
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- exrenal js file  -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/logout.js"></script>
+    <!-- swiper js file  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../js/team-work.js"></script>
+<!-- Axios cdn -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+</html>

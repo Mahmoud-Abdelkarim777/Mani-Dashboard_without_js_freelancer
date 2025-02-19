@@ -1,0 +1,257 @@
+/* import google font  */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+.main .issue{
+    background-color: #EFF1FF;
+    height: 120vh;
+}
+.main .issue .adding .rounded-3{
+    background-color: #2F2B73;
+    color: white;
+}
+.main .issue .search .search-items img{
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.main .issue .search .search-items .txt{
+    font-size: 16px;
+    font-weight: 400;
+    color: #56565E;
+}
+.main .issue .search .search-items .txt:focus{
+    outline: 0;
+}
+/* swiper  */
+.swiper {
+    width: 90%;
+    height: 690px;
+    margin: auto;
+}
+.swiper-slide {
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 8px 0px #14123A17;
+    height: 295px !important; 
+    width: 270px !important;
+}
+.swiper-slide .card-link .title{
+    font-size: 24px;
+    font-weight: 500;
+    color: #2F2B73;
+}
+.dropdown-toggle::after{
+    display: none;
+    outline: none;
+    border: none;
+}
+.dropdown-toggle:focus{
+    outline: none;
+}
+.dropdown-menu.show{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 135px;
+    height: 102px;
+    background: #EFF1FF;
+    font-size: 16px;
+    font-weight: 400;
+    right: -90px !important;
+}
+/* .swiper-slide .card-link button .status{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 116px;
+    height: 102px;
+    background: #EFF1FF;
+    font-size: 16px;
+    font-weight: 400;
+    position: absolute;
+    left: -35px;
+    display: none;
+} */
+
+.swiper-slide .card-link .lawyer{
+    font-size: 16px;
+    font-weight: 400;
+    color: #56565E;
+}
+.swiper-slide .card-link .list ul li{
+    list-style-type: disc;
+    font-size: 16px;
+    font-weight: 400;
+    color: #14123A;
+    margin-bottom: 8px;
+}
+.swiper-slide .card-link .list ul li::marker {
+    font-size: 8px;
+}
+/* old  */
+.swiper-slide p {
+    font-size: 16px;
+    font-weight: 500;
+}
+/* .swiper-slide .list span {
+    font-size: 34px;
+    margin-top: -17px;
+    height: 5px;
+    width: 5px;
+} */
+.swiper-slide .span {
+    font-size: 16px;
+    font-weight: 400;
+}
+.swiper-slide i {
+    font-size: 16px;
+    font-weight: 400;
+    color: #9E9EA3;
+    ;
+}
+/* old  */
+.swiper-pagination-bullet {
+    
+    padding: 1px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #999; 
+    transition: color 0.3s, font-weight 0.3s; 
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    opacity: 1;
+    color:  #14123A;
+    background: #D4D3F2;
+}
+/* .swiper-pagination-custom{
+    bottom: 0;
+} */
+.swiper-pagination-bullet.active {
+    font-weight: bold; 
+    color: #ffffff; 
+    background-color: #2F2B73;
+}
+.swiper-pagination-custom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    top: 94%;
+    height: 20px;
+}
+/* paganation  */
+.swiper-button-prev, .swiper-rtl .swiper-button-next {
+    left: 40%;
+    bottom: 0;
+}
+.swiper-button-next, .swiper-rtl .swiper-button-prev {
+    right: 40%;
+    bottom: 0;
+}
+.swiper-button-next, .swiper-button-prev{
+    top: 95% !important;
+}
+.swiper-button-next:after{
+    content: url(../img/angles-left-solid.svg) !important;
+    width: 24px;
+}
+
+.swiper-button-prev:after {
+    content: url(../img/angles-right-solid.svg) !important;
+    width: 24px;
+    position: absolute;
+}
+/* swiper  */
+/* model  */
+.modal-body input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #C4C4C4;
+    color: #56565E;
+}
+.modal-body input:focus{
+    box-shadow: none;
+    outline: none;
+}
+.modal-body #jobRole{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #C4C4C4;
+    color: #56565E;
+}
+.modal-body #jobRole:focus{
+    box-shadow: none;
+    outline: none;
+}
+.modal-footer .adding{
+    background-color: #2F2B73;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 185px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.modal-footer .del{
+    background-color: white;
+    color: #14123A;
+    border: 1px solid #2F2B73;
+    cursor: pointer;
+    width: 80px;
+    font-size: 16px;
+    font-weight: 500;
+}
+#deleteEmployeeModal .modal-body .card-link p{
+    font-size: 20px;
+    font-weight: 500;
+    color: #2F2B73;
+}
+#deleteEmployeeModal .modal-body .card-link span{
+    font-size: 20px;
+    font-weight: 700;
+    color: #2F2B73;
+}
+.modal-footer .yes{
+    background-color: #2F2B73;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 174px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 38px;
+}
+.modal-footer .cancel{
+    background-color: white;
+    color: #14123A;
+    border: 1px solid #2F2B73;
+    cursor: pointer;
+    width: 174px;
+    font-size: 16px;
+    font-weight: 500;
+    height: 38px;
+}
+#notification{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    top: 3px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}

@@ -1,0 +1,88 @@
+/* Import google font  */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Tajawal", sans-serif;
+}
+.main .issue{
+    background-color: #EFF1FF;
+    height: 110vh;
+}
+.content .form{
+    border-radius: 20px;
+    width: 547px;
+    border: 1px solid #5958B5;
+}
+.content .form h2{
+    font-size: 31px;
+    font-weight: 700;
+    color: #2F2B73;
+}
+.content .form label{
+    font-size: 20px;
+    font-weight: 500;
+    color: #56565E;
+}
+.content .form .submit button{
+    width: 147px;
+    background-color: #2F2B73;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+}
+.content .form .position-relative i{
+    color: #797982;
+}
+.content .form .position-relative input{
+    border: none;
+    color: #14123A !important;
+    background-color: white !important;
+}
+.content .form .position-relative input:focus{
+    outline: none;
+}
+.content .form .position-relative #basic-addon1{
+    transform: translate(65px, -50%);
+    left: 0;
+    opacity: .6;
+}
+.content .form .position-relative .fa-solid{
+    transform: translate(24px, -50%);
+}
+.content .form .position-relative .fa-eye-slash{
+    transform: translate(30px, -50%);
+}
+.content .form .position-relative .fa-eye{
+    transform: translate(29px, -50%);
+}
+/* md screen  */
+@media (min-width: 768px) and (max-width: 992px){
+    
+}
+/* sm screen  */
+@media (max-width: 768px){
+    .content .form{
+        width: 100%;
+    }
+    .content .form .submit button{
+        width: 132px;
+        padding: .25rem !important;
+    }
+}
+#notification{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    top: 3px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}

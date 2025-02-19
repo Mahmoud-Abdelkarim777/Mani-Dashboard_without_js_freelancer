@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <!-- bootstrap cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- Swiper CDN css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- external css file  -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/show-issue.css">
+    <title>عرض ملف قضية العميل</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- side bar  -->
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-arrow-left"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <!-- <a href="#">ماني للمحاماة</a> -->
+                    <img src="../img/Logo.svg" alt="" style="padding-top: 30px; " >
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item focus">
+                    <a href="../pages/issues.html" class="sidebar-link">
+                        <i class="lni lni-folder"></i>
+                        <span>القضايا</span>
+                    </a>
+                </li>
+                <li class="sidebar-item ">
+                    <a href="./custom.html" class="sidebar-link">
+                        <i class="lni lni-users"></i>
+                        <span>العملاء</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="../pages/team-work.html" class="sidebar-link">
+                        <i class="lni lni-network"></i>
+                        <span>فريق العمل</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="../pages/common-question.html" class="sidebar-link">
+                        <i class="lni lni-question-circle"></i>
+                        <span>الأسئلة الشائعة</span>
+                    </a>
+                </li>
+                <li class="sidebar-item position-relative">
+                    <a href="../pages/Customer-inquiries.html" class="sidebar-link">
+                        <i class="lni lni-envelope"></i>
+                        <span>استفسارات العملاء</span>
+                        <span id="notification" class="position-absolute"></span>
+                    </a>
+                </li>
+                <li class="sidebar-item ">
+                    <a href="../pages/register.html" class="sidebar-link">
+                        <i class="lni lni-user"></i>
+                        <span>إنشاء حساب جديد</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span id="logoutBtn">تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+        <!-- end side bar  -->
+        <div class="main">
+            <!-- start navbar  -->
+            <nav class=" navbar navbar-expand">
+                <div class="container navbar-collapse collapse">
+                    <ul class="navbar-nav d-flex align-items-center justify-content-between w-100  ">
+                        <li>
+                            <p class="mb-0">مرحبا </p>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="./issues.html"  class="nav-icon pe-md-0">
+                                <img src="../img/unsplash.svg" class="avatar img-fluid " alt="photo">
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+            <!-- end navbar  -->
+            <!-- start show issue  -->
+            <section class="issue mt-3 position-relative">
+                <div class="container">
+                    <div class="img position-absolute">
+                        <img src="../img/Frame.svg" class="w-100" alt="photo">
+                    </div>
+                    <div class="content position-relative">
+                        <div class="navigat mb-5 mt-3">
+                            <a href="./issues.html" class="text-decoration-underline">القضايا</a>
+                            <span>></span>
+                            <span>ملفات القضية</span>
+                        </div>
+                        <form  class="row" enctype="multipart/form-data">
+                            <article class="item-1 col-6">
+                                <h2>القضية رقم <span></span></h2>
+                                <label for="name-client" class="mb-2">اسم العميل</label>
+                                <input type="text" id="name-client" class="w-100 p-1 rounded-3 mb-2 ">
+                                <label for="national-id" class="mb-2">رقم الهوية</label>
+                                <input type="text" id="national-id" class="w-100 p-1 rounded-3 mb-2 ">
+                                <div class="w-100 d-flex align-items-center gap-3 mb-2">
+                                    <div class="w-50">
+                                        <label for="type-issue" class="mb-2">نوع الدعوة</label>
+                                        <input type="text" id="type-issue" class="w-100 p-1 rounded-3 ">
+                                    </div>
+                                    <div class="w-50 d-flex flex-column">
+                                        <label for="" class="mb-2">حالة القضية</label>
+                                        <select name="" id="" class="p-1 rounded-3">
+                                            <option value="قيد التنفيذ">قيد التنفيذ</option>
+                                            <option value="محالة للتنفيذ">محالة للتنفيذ</option>
+                                            <option value="أرشيف">أرشيف</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <label for="" class="mb-2">التاريخ التالي للجلسة</label>
+                                <input type="date" id="date" class="w-100 p-1 rounded-3 mb-2 ">
+                                <label for="addition-notes" class="mb-2">وصف مختر للقضية</label>
+                                <textarea name="" id="description" rows="1" class="w-100 p-1 rounded-3 mb-0 "></textarea>
+                                <label for="addition-notes" class="mb-2">ملاحظات اضافية</label>
+                                <textarea name="" id="addition-notes" rows="1" class="w-100 p-1 rounded-3 mb-0 "></textarea>
+                                <!-- file  -->
+                                <label for="case-file" class="mb-2">إرفاق ملفات القضية</label>
+                                <label for="case-file" class="file-upload-label w-50 mb-3">
+                                    <input type="file" id="case-file" class="custom-file-input">
+                                    <span class="file-name">لم يتم اختيار ملف</span>
+                                    <i class="fa fa-paperclip"></i>
+                                </label>
+                            </article>
+                            <article class="item-2 col-6 px-5">
+                                <!-- <h2 class="mb-5 pe-5">الملفات الحالية للقضية</h2>
+                                <div class="case-issue d-flex align-items-center gap-3 mb-3 px-5 w-100">
+                                    <label class="w-100 rounded-3 d-flex flex-column justify-content-center align-items-center">
+                                        <input type="file" class="custom-file-input" disable>
+                                        <a href="${file.FileLink}" target="_blank" class="file-link">
+                                            <span class="file-name w-100 d-block">asd</span>
+                                        </a>
+                                    </label>
+                                    <i class="fa-regular fa-trash-can" onclick="deleteFile('${file._id}')"></i>
+                                </div>
+                                <div class="case-issue d-flex align-items-center gap-3 mb-3 px-5 w-100">
+                                    <label class="w-100 rounded-3 d-flex flex-column justify-content-center align-items-center">
+                                        <input type="file" class="custom-file-input" disable>
+                                        <a href="${file.FileLink}" target="_blank" class="file-link">
+                                            <span class="file-name w-100 d-block">asd</span>
+                                        </a>
+                                    </label>
+                                    <i class="fa-regular fa-trash-can" onclick="deleteFile('${file._id}')"></i>
+                                </div>
+                                <div class="case-issue d-flex align-items-center gap-3 mb-3 px-5 w-100">
+                                    <label class="w-100 rounded-3 d-flex flex-column justify-content-center align-items-center">
+                                        <input type="file" class="custom-file-input" disable>
+                                        <a href="${file.FileLink}" target="_blank" class="file-link">
+                                            <span class="file-name w-100 d-block">asd</span>
+                                        </a>
+                                    </label>
+                                    <i class="fa-regular fa-trash-can" onclick="deleteFile('${file._id}')"></i>
+                                </div> -->
+                                
+                            </article>
+                            <div class="w-25">
+                                <button class="btn-update p-1 rounded-3 py-2
+                                ">تحديث الحالة</button>
+                            </div>
+                            
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <!-- end show issue  -->
+            
+        </div>
+    </div>
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Axios cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- exrenal js file  -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/show-issue.js"></script>
+    <script src="../js/logout.js"></script>
+</body>
+</html>

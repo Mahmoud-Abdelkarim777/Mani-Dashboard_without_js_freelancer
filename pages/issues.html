@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <!-- bootstrap cdn  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+    <!-- Swiper CDN css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- font awesome cdn  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- external css file  -->
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>القضايا</title>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- side bar  -->
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button class="toggle-btn" type="button">
+                    <i class="lni lni-arrow-left"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <!-- <a href="#">ماني للمحاماة</a> -->
+                    <img src="../img/Logo.svg" alt="" style="padding-top: 30px; " >
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item focus  ">
+                    <a href="./issues.html" class="sidebar-link">
+                        <i class="lni lni-folder"></i>
+                        <span>القضايا</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./custom.html" class="sidebar-link">
+                        <i class="lni lni-users"></i>
+                        <span>العملاء</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./team-work.html" class="sidebar-link">
+                        <i class="lni lni-network"></i>
+                        <span>فريق العمل</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./common-question.html" class="sidebar-link">
+                        <i class="lni lni-question-circle"></i>
+                        <span>الأسئلة الشائعة</span>
+                    </a>
+                </li>
+                <li class="sidebar-item position-relative">
+                    <a href="./Customer-inquiries.html" class="sidebar-link">
+                        <i class="lni lni-envelope"></i>
+                        <span>استفسارات العملاء</span>
+                        <span id="notification" class="position-absolute"></span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./register.html" class="sidebar-link">
+                        <i class="lni lni-user"></i>
+                        <span>إنشاء حساب جديد</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="#" class="sidebar-link">
+                    <i class="lni lni-exit"></i>
+                    <span id="logoutBtn">تسجيل الخروج</span>
+                </a>
+            </div>
+        </aside>
+        <!-- end side bar  -->
+        <div class="main">
+            <!-- start navbar  -->
+            <nav class=" navbar navbar-expand">
+                <div class="container navbar-collapse collapse">
+                    <ul class="navbar-nav d-flex align-items-center justify-content-between w-100  ">
+                        <li>
+                            <p class="mb-0">مرحبا </p>
+                        </li>
+                        <li class="nav-item ">
+                            <a href="./issues.html"  class="nav-icon pe-md-0">
+                                <img src="../img/unsplash.svg" class="avatar img-fluid " alt="photo">
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </nav>
+            <!-- end navbar  -->
+            <!-- start issue  -->
+            <section class="issue">
+                <div class="container">
+                    <div class="d-flex gap-4">
+                        <div class="adding d-flex align-items-center w-25 rounded-3 ">
+                            <div class=" rounded-3 px-3" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                <!-- Button trigger modal -->
+                                <button class="bttn p-2  border-0 rounded-3" >
+                                    إضافة قضية جديدة
+                                    <img src="../img/Add_round.svg" alt="add">
+                                </button>
+                            </div>
+                        </div>
+                        <div class="search d-flex gap-3 w-75">
+                            <div class="search-items d-flex align-items-center justify-content-between w-75 p-2 position-relative ">
+                                <input type="text" class="txt w-100 p-2 rounded-3 border-0 " id="search-input" placeholder="بحث برقم الهوية">
+                                <img src="../img/search.svg" class="position-absolute" alt="search" id="search-icon">
+                            </div>
+                            <div class="filter d-flex align-items-center justify-content-center gap-2 w-25 my-2 rounded-3  ">
+                                <img src="../img/Filter.svg" class="p-2" alt="filter" >
+                                <div class="position-relative">
+                                    <a class="nav-item dropdown ">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            تصفية
+                                        </a>
+                                        <ul class="dropdown-menu position-absolute text-center" id="filter-menu">
+                                            <li><a class="dropdown-item" data-type="المدنية" href="#">المدنية</a></li>
+                                            <li><a class="dropdown-item" data-type="الجنائية" href="#"> الجنائية</a></li>
+                                            <li><a class="dropdown-item" data-type="الأحوال الشخصية" href="#">الأحوال الشخصية</a></li>
+                                            <li><a class="dropdown-item" data-type="الإدارية" href="#">الإدارية</a></li>
+                                            <li><a class="dropdown-item" data-type="الحقوقية" href="#">الحقوقية</a></li>
+                                        </ul>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="line mb-3 mt-1" style="height: 1px; background-color: #D4D3F2;"></div>
+                </div>
+                <div class="container">
+                    <div class=" swiper" >
+                        <div class="card-wrapper position-relative">
+                            <ul class="card-list swiper-wrapper">
+                                <!-- slide 1  -->
+                                <!-- <li class="card-item swiper-slide">
+                                    <article class="card-link rounded-3 pb-2 ">
+                                        <div class="card-link-top-1  d-flex align-items-center justify-content-center rounded-top  mb-2 ">
+                                            <p class="mb-0">القضية رقم #12500</p>
+                                        </div>
+                                        <div class="d-flex flex-column px-3 mb-2">
+                                            <div class="d-flex mb-2">
+                                                <div>
+                                                    <img src="../img/User_light.svg" alt="">
+                                                </div>
+                                                <p class="mb-0">
+                                                    رقم الهوية: <span>1023456789</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex mb-2">
+                                                <div>
+                                                    <img src="../img/Folder_line_light.svg" alt="">
+                                                </div>
+                                                <p class="mb-0">
+                                                    نـوع الدعـوة: <span>جنائية</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex mb-2">
+                                                <div>
+                                                    <img src="../img/File_dock_light.svg" alt="">
+                                                </div>
+                                                <p class="mb-0">
+                                                وصف مختصر للقضية: <span>قضيـة سـرقة تتعـلـق بالمتهم بسرقة متجر إلكترونيات، تشمل القضية اتهامات بحيازة ممتلكات مسروقة والتسبب في ضرر للمتجر.</span>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex mb-2">
+                                                <div>
+                                                    <img src="../img/Hourglass_light.svg" alt="">
+                                                </div>
+                                                <p class="mb-0">
+                                                    حالة القضية:
+                                                    <div class="status">
+                                                        <span class="span-1"><i class="fa-regular fa-circle-check"></i></span>قيد التنفيذ
+                                                    </div>
+                                                </p>
+                                            </div>
+                                            <div class="d-flex mb-2">
+                                                <div>
+                                                    <img src="../img/Date_range_light.svg" alt="">
+                                                </div>
+                                                <p class="mb-0">
+                                                    التاريخ التالي للجلسة: <span>15/3/2025</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="px-3 mb-3">
+                                            <div style="height: 1px ; background-color: #9E9EA3;"></div>
+                                        </div>
+                                        <div class="shw px-3 rounded-3 mb-2">
+                                            <a href="../pages/show-issue.html" class="text-decoration-none">
+                                                <button class="w-100 px-4 py-2 rounded-3 ">
+                                                    عرض ملف القضية
+                                                </button>
+                                            </a>
+                                        </div>
+                                    </article>
+                                </li> -->
+                            </ul>
+                            <div class="swiper-pagination position-absolute">
+                                
+                            </div>
+                            <div class="swiper-slide-button swiper-button-prev position-absolute"></div>
+                            <div class="swiper-slide-button swiper-button-next position-absolute+++"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end issue  -->
+            <section class="container">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <!-- Header Section -->
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel" style="color: black;">إضافة قضية جديدة</h1>
+                                <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            
+                            <!-- Body Section -->
+                            <div class="modal-body pb-0">
+                                <form id="newIssueForm" method="post">
+                                    <article class="card-link rounded-3">
+                                        <!-- Case Number Section -->
+                                        <!-- <div class="card-link-top-1 d-flex align-items-center justify-content-center rounded-top mb-2">
+                                            <p class="mb-0">القضية رقم </p>
+                                            <input type="text" id="issueNumber" class="me-2 rounded-3 border-1" placeholder="رقم القضية" required>
+                                        </div> -->
+                    
+                                        <!-- Additional Fields -->
+                                        <div class="d-flex flex-column px-3 mb-2">
+                                            <!-- ID Number Field -->
+                                            <div class="d-flex mb-2">
+                                                <div><img src="../img/User_light.svg" alt=""></div>
+                                                <p class="mb-0 w-100">
+                                                    رقم الهوية: <br>
+                                                    <input type="number" id="clientNationalNumber" class="w-100 rounded-3 border-1" placeholder="رقم الهوية" required>
+                                                </p>
+                                            </div>
+                    
+                                            <!-- Case Type Field -->
+                                            <div class="d-flex mb-2">
+                                                <div><img src="../img/Folder_line_light.svg" alt=""></div>
+                                                <p class="mb-0 w-100">
+                                                    نـوع الدعـوة:
+                                                    <!-- <input type="text"  class="w-100 rounded-3 border-1" placeholder="نوع الدعوة" required> -->
+                                                    <select id="issueType" class="w-100 rounded-3 border-1">
+                                                        <option value="" disabled selected>نـوع الدعـوة</option>
+                                                        <option value="المدنية">المدنية</option>
+                                                        <option value="الجنائية">الجنائية</option>
+                                                        <option value="الأحوال الشخصية">الأحوال الشخصية</option>
+                                                        <option value="الإدارية">الإدارية</option>
+                                                        <option value="الحقوقية">الحقوقية</option>
+                                                    </select>
+                                                </p>
+                                            </div>
+                    
+                                            <!-- Short Description Field -->
+                                            <div class="d-flex mb-2">
+                                                <div><img src="../img/File_dock_light.svg" alt=""></div>
+                                                <p class="mb-0 w-100">
+                                                    وصف مختصر للقضية: <br>
+                                                    <textarea name="" type="text" id="description" rows="4" class="w-100 rounded-3 border-1 pe-2" placeholder="وصف مختصر للقضية" required></textarea>
+                                                </p>
+                                            </div>
+                    
+                                            <!-- Case Status Field -->
+                                            <div class="d-flex mb-2">
+                                                <div><img src="../img/Hourglass_light.svg" alt=""></div>
+                                                <p class="mb-0">
+                                                    حالة القضية: <br>
+                                                    <div class="status">
+                                                        <span class="span-1"><i class="fa-regular fa-circle-check"></i></span> قيد التنفيذ
+                                                    </div>
+                                                </p>
+                                            </div>
+                    
+                                            <!-- Next Session Date Field -->
+                                            <div class="d-flex mb-2">
+                                                <div><img src="../img/Date_range_light.svg" alt=""></div>
+                                                <p class="mb-0 w-100">
+                                                    التاريخ التالي للجلسة: <br>
+                                                    <input type="date" id="nextDate" class="w-100 rounded-3 border-1" placeholder="01/11/2010" required>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <!-- Footer Section with Customized Buttons -->
+                                    <div class="modal-footer d-flex justify-content-start">
+                                        <button type="button" id="submitFormBtn" class="btn px-4 py-2" style="background-color: #2F2B73; color: white;">إضافة</button>
+                                        <button type="button" class="btn me-2 rounded cancel" data-bs-dismiss="modal" style="background-color: white; color: #000; border: 1px solid #2F2B73;">إلغاء</button>
+                                    </div>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+        </div>
+    </div>
+    <!-- bootstrap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- exrenal js file  -->
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/logout.js"></script>
+    <!-- Swiper cdn js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="../js/swiper.js"></script> -->
+    <script src="../js/issues.js"></script>
+<!-- Axios cdn -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
